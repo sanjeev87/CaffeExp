@@ -309,5 +309,6 @@ layers {
     bottom: "feat"
     bottom: "feat_p"
     bottom: "sim"
+    bottom: "sim"
     top: "loss"
 }
