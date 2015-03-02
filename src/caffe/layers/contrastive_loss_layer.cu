@@ -36,18 +36,18 @@ void ContrastiveLossLayer<Dtype>::Forward_gpu(
       
       
   for (int i = 0; i < bottom[0]->num(); ++i) {
-      printf("margin : %d\n", (int) margin);
-      printf("label : %d \n", static_cast<int>(bottom[2]->cpu_data()[i]));
+     // printf("margin : %d\n", (int) margin);
+      //printf("label : %d \n", static_cast<int>(bottom[2]->cpu_data()[i]));
     if (static_cast<int>(bottom[2]->cpu_data()[i])) {  // similar pairs
       loss += dist_sq_.cpu_data()[i];
-      printf("Loss Similar Pair L2NormSquare : %f\n", (float) dist_sq_.cpu_data()[i]);
+      //printf("Loss Similar Pair L2NormSquare : %f\n", (float) dist_sq_.cpu_data()[i]);
     } else {  // dissimilar pairs
       loss += std::max(margin-dist_sq_.cpu_data()[i], Dtype(0.0));
-      printf("Loss dissimal pair : %f\n", (float) std::max(margin-dist_sq_.cpu_data()[i], Dtype(0.0)));
+      //printf("Loss dissimal pair : %f\n", (float) std::max(margin-dist_sq_.cpu_data()[i], Dtype(0.0)));
     }
   }
   loss = loss / static_cast<Dtype>(bottom[0]->num()) / Dtype(2);
-  printf("total loss for batch : %f \n", loss);
+  //printf("total loss for batch : %f \n", loss);
   (*top)[0]->mutable_cpu_data()[0] = loss;
 }
 
