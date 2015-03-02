@@ -6,7 +6,7 @@ layers {
   top: "label"
   image_data_param {
     source: "data/test/train.txt"
-    batch_size: 50
+    batch_size: 10
     new_height: 256
     new_width: 256
   }
@@ -24,7 +24,7 @@ layers {
   top: "label"
   image_data_param {
     source: "data/test/train.txt"
-    batch_size: 50
+    batch_size: 10
     new_height: 256
     new_width: 256
   }
@@ -43,7 +43,7 @@ layers {
   top: "label_p"
   image_data_param {
     source: "data/test/train_p.txt"
-    batch_size: 50
+    batch_size: 10
     new_height: 256
     new_width: 256
   }
@@ -61,7 +61,7 @@ layers {
   top: "label_p"
   image_data_param {
     source: "data/test/train_p.txt"
-    batch_size: 50
+    batch_size: 10
     new_height: 256
     new_width: 256
   }
