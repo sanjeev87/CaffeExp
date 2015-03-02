@@ -1,4 +1,3 @@
-name: "Siamese_ImageNet"
 name: "mnist_siamese_train_test"
 layers {
   name: "pair_data"
