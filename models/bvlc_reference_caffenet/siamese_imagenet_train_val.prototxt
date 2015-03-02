@@ -6,7 +6,7 @@ layers {
   top: "label"
   image_data_param {
     source: "data/test/words_train.txt"
-    batch_size: 10
+    batch_size: 100
     new_height: 256
     new_width: 256
   }
@@ -24,7 +24,7 @@ layers {
   top: "label"
   image_data_param {
     source: "data/test/words_train.txt"
-    batch_size: 10
+    batch_size: 100
     new_height: 256
     new_width: 256
   }
@@ -43,7 +43,7 @@ layers {
   top: "label_p"
   image_data_param {
     source: "data/test/words_train_p.txt"
-    batch_size: 10
+    batch_size: 100
     new_height: 256
     new_width: 256
   }
@@ -61,7 +61,7 @@ layers {
   top: "label_p"
   image_data_param {
     source: "data/test/words_train_p.txt"
-    batch_size: 10
+    batch_size: 100
     new_height: 256
     new_width: 256
   }
@@ -706,7 +706,7 @@ layers {
     name: "loss"
     type: CONTRASTIVE_LOSS
     contrastive_loss_param {
-        margin: 100
+        margin: 1
     }
     bottom: "fc8_flickr"
     bottom: "fc8_flickr_p"

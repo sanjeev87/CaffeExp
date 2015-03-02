@@ -9,6 +9,6 @@ display: 10
 max_iter: 450000
 momentum: 0.9
 weight_decay: 0.0005
-snapshot: 5000
+snapshot: 1000
 snapshot_prefix: "models/bvlc_reference_caffenet/siamese_imagenet_train"
 solver_mode: GPU
