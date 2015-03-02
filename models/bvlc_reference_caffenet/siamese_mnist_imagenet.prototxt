@@ -668,6 +668,6 @@ layers {
     }
     bottom: "fc8_flickr"
     bottom: "fc8_flickr_p"
-    bottom: "label"
+    bottom: "sim"
     top: "loss"
 }
