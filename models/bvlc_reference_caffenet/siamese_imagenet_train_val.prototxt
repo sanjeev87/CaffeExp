@@ -384,6 +384,8 @@ layers {
       value: 0
     }
   }
+  param: "fc8_w"
+  param: "fc8_b"
 }
 
 layers {
@@ -696,6 +698,8 @@ layers {
       value: 0
     }
   }
+  param: "fc8_w"
+  param: "fc8_b"
 }
 
 layers {
