@@ -79,9 +79,9 @@ layers {
   type: CONVOLUTION
   bottom: "data"
   top: "conv1"
-  blobs_lr: 1
-  blobs_lr: 2
-  weight_decay: 1
+  blobs_lr: 0
+  blobs_lr: 0
+  weight_decay: 0
   weight_decay: 0
   convolution_param {
     num_output: 96
@@ -132,9 +132,9 @@ layers {
   type: CONVOLUTION
   bottom: "norm1"
   top: "conv2"
-  blobs_lr: 1
-  blobs_lr: 2
-  weight_decay: 1
+  blobs_lr: 0
+  blobs_lr: 0
+  weight_decay: 0
   weight_decay: 0
   convolution_param {
     num_output: 256
@@ -186,9 +186,9 @@ layers {
   type: CONVOLUTION
   bottom: "norm2"
   top: "conv3"
-  blobs_lr: 1
-  blobs_lr: 2
-  weight_decay: 1
+  blobs_lr: 0
+  blobs_lr: 0
+  weight_decay: 0
   weight_decay: 0
   convolution_param {
     num_output: 384
@@ -217,9 +217,9 @@ layers {
   type: CONVOLUTION
   bottom: "conv3"
   top: "conv4"
-  blobs_lr: 1
-  blobs_lr: 2
-  weight_decay: 1
+  blobs_lr: 0
+  blobs_lr: 0
+  weight_decay: 0
   weight_decay: 0
   convolution_param {
     num_output: 384
@@ -249,9 +249,9 @@ layers {
   type: CONVOLUTION
   bottom: "conv4"
   top: "conv5"
-  blobs_lr: 1
-  blobs_lr: 2
-  weight_decay: 1
+  blobs_lr: 0
+  blobs_lr: 0
+  weight_decay: 0
   weight_decay: 0
   convolution_param {
     num_output: 256
@@ -292,9 +292,9 @@ layers {
   type: INNER_PRODUCT
   bottom: "pool5"
   top: "fc6"
-  blobs_lr: 1
-  blobs_lr: 2
-  weight_decay: 1
+  blobs_lr: 0
+  blobs_lr: 0
+  weight_decay: 0
   weight_decay: 0
   inner_product_param {
     num_output: 4096
@@ -369,9 +369,9 @@ layers {
   type: CONVOLUTION
   bottom: "data_p"
   top: "conv1_p"
-  blobs_lr: 1
-  blobs_lr: 2
-  weight_decay: 1
+  blobs_lr: 0
+  blobs_lr: 0
+  weight_decay: 0
   weight_decay: 0
   convolution_param {
     num_output: 96
@@ -422,9 +422,9 @@ layers {
   type: CONVOLUTION
   bottom: "norm1_p"
   top: "conv2_p"
-  blobs_lr: 1
-  blobs_lr: 2
-  weight_decay: 1
+  blobs_lr: 0
+  blobs_lr: 0
+  weight_decay: 0
   weight_decay: 0
   convolution_param {
     num_output: 256
@@ -476,9 +476,9 @@ layers {
   type: CONVOLUTION
   bottom: "norm2_p"
   top: "conv3_p"
-  blobs_lr: 1
-  blobs_lr: 2
-  weight_decay: 1
+  blobs_lr: 0
+  blobs_lr: 0
+  weight_decay: 0
   weight_decay: 0
   convolution_param {
     num_output: 384
@@ -507,9 +507,9 @@ layers {
   type: CONVOLUTION
   bottom: "conv3_p"
   top: "conv4_p"
-  blobs_lr: 1
-  blobs_lr: 2
-  weight_decay: 1
+  blobs_lr: 0
+  blobs_lr: 0
+  weight_decay: 0
   weight_decay: 0
   convolution_param {
     num_output: 384
@@ -539,9 +539,9 @@ layers {
   type: CONVOLUTION
   bottom: "conv4_p"
   top: "conv5_p"
-  blobs_lr: 1
-  blobs_lr: 2
-  weight_decay: 1
+  blobs_lr: 0
+  blobs_lr: 0
+  weight_decay: 0
   weight_decay: 0
   convolution_param {
     num_output: 256
@@ -582,9 +582,9 @@ layers {
   type: INNER_PRODUCT
   bottom: "pool5_p"
   top: "fc6_p"
-  blobs_lr: 1
-  blobs_lr: 2
-  weight_decay: 1
+  blobs_lr: 0
+  blobs_lr: 0
+  weight_decay: 0
   weight_decay: 0
   inner_product_param {
     num_output: 4096
