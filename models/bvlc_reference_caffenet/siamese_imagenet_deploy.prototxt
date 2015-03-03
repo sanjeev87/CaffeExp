@@ -1,9 +1,9 @@
 name: "Siamese_ImageNet"
 input: "data"
 input_dim: 1
-input_dim: 1
-input_dim: 256
-input_dim: 256
+input_dim: 3
+input_dim: 227
+input_dim: 227
 layers {
   name: "conv1"
   type: CONVOLUTION
