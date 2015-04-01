@@ -5,7 +5,7 @@ layers {
   top: "data"
   top: "label"
   image_data_param {
-    source: "data/test/words_train.txt"
+    source: "data/nimstim/nimstim_train.txt"
     batch_size: 100
     new_height: 256
     new_width: 256
@@ -23,7 +23,7 @@ layers {
   top: "data"
   top: "label"
   image_data_param {
-    source: "data/test/words_train.txt"
+    source: "data/nimstim/nimstim_train.txt"
     batch_size: 100
     new_height: 256
     new_width: 256
@@ -42,7 +42,7 @@ layers {
   top: "data_p"
   top: "label_p"
   image_data_param {
-    source: "data/test/words_train_p.txt"
+    source: "data/nimstim/nimstim_train_p.txt"
     batch_size: 100
     new_height: 256
     new_width: 256
@@ -60,7 +60,7 @@ layers {
   top: "data_p"
   top: "label_p"
   image_data_param {
-    source: "data/test/words_train_p.txt"
+    source: "data/nimstim/nimstim_train_p.txt"
     batch_size: 100
     new_height: 256
     new_width: 256
