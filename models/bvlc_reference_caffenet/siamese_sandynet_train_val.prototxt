@@ -314,7 +314,7 @@ layers {
   name: "ip1_p"
   type: INNER_PRODUCT
   bottom: "norm2_p"
-  top: "ip1"
+  top: "ip1_p"
   blobs_lr: 1
   blobs_lr: 2
   inner_product_param {
