@@ -11,6 +11,7 @@ layers {
     new_width: 227
   }
   transform_param {
+    crop_size: 227
     mirror: true
     scale: 0.00390625
   }
