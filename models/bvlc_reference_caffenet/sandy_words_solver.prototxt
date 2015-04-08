@@ -1,5 +1,5 @@
 # The train/test net protocol buffer definition
-net: "models/vwfa/train_validation.prototxt"
+net: "models/bvlc_reference_caffenet/sandy_words_train_validation.prototxt"
 # test_iter specifies how many forward passes the test should carry out.
 # In the case of MNIST, we have test batch size 100 and 100 test iterations,
 # covering the full 10,000 testing images.
@@ -20,6 +20,6 @@ display: 100
 max_iter: 100000
 # snapshot intermediate results
 snapshot: 5000
-snapshot_prefix: "models/vwfa/vwfa"
+snapshot_prefix: "models/sandy_words"
 # solver mode: CPU or GPU
 solver_mode: GPU
