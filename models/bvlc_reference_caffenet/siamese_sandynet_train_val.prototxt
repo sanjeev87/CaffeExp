@@ -7,8 +7,8 @@ layers {
   image_data_param {
     source: "data/nimstim/nimstim_train_an_ha.txt"
     batch_size: 32
-    new_height: 227
-    new_width: 227
+    new_height: 256
+    new_width: 256
   }
   transform_param {
     crop_size: 227
@@ -25,8 +25,8 @@ layers {
   image_data_param {
     source: "data/nimstim/nimstim_train_an_ha.txt"
     batch_size: 32
-    new_height: 227
-    new_width: 227
+    new_height: 256
+    new_width: 256
   }
   transform_param {
     crop_size: 227
@@ -43,8 +43,8 @@ layers {
   image_data_param {
     source: "data/nimstim/nimstim_train_an_ha.txt"
     batch_size: 32
-    new_height: 227
-    new_width: 227
+    new_height: 256
+    new_width: 256
   }
   transform_param {
     mirror: false
@@ -61,8 +61,8 @@ layers {
   image_data_param {
     source: "data/nimstim/nimstim_train_an_ha.txt"
     batch_size: 32
-    new_height: 227
-    new_width: 227
+    new_height: 256
+    new_width: 256
   }
   transform_param {
     mirror: false
