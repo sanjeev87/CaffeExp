@@ -47,6 +47,7 @@ layers {
     new_width: 256
   }
   transform_param {
+    crop_size: 227
     mirror: false
     scale: 0.00390625
   }
@@ -65,6 +66,7 @@ layers {
     new_width: 256
   }
   transform_param {
+    crop_size: 227
     mirror: false
     scale: 0.00390625
   }
