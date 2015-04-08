@@ -179,7 +179,7 @@ layers {
   blobs_lr: 1
   blobs_lr: 2
   inner_product_param {
-    num_output: 1024
+    num_output: 2048
     weight_filler {
       type: "xavier"
     }
@@ -204,7 +204,7 @@ layers {
   blobs_lr: 1
   blobs_lr: 2
   inner_product_param {
-    num_output: 2
+    num_output: 850
     weight_filler {
       type: "xavier"
     }
@@ -214,6 +214,25 @@ layers {
   }
   param: "ip2_w"
   param: "ip2_b"
+}
+layers {
+  name: "ip3"
+  type: INNER_PRODUCT
+  bottom: "ip2"
+  top: "ip3"
+  blobs_lr: 1
+  blobs_lr: 2
+  inner_product_param {
+    num_output: 2
+    weight_filler {
+      type: "xavier"
+    }
+    bias_filler {
+      type: "constant"
+    }
+  }
+  param: "ip3_w"
+  param: "ip3_b"
 }
 
 layers {
@@ -322,7 +341,7 @@ layers {
   blobs_lr: 1
   blobs_lr: 2
   inner_product_param {
-    num_output: 1024
+    num_output: 2048
     weight_filler {
       type: "xavier"
     }
@@ -347,7 +366,7 @@ layers {
   blobs_lr: 1
   blobs_lr: 2
   inner_product_param {
-    num_output: 2
+    num_output: 850
     weight_filler {
       type: "xavier"
     }
@@ -360,13 +379,33 @@ layers {
 }
 
 layers {
+  name: "ip3_p"
+  type: INNER_PRODUCT
+  bottom: "ip2_p"
+  top: "ip3_p"
+  blobs_lr: 1
+  blobs_lr: 2
+  inner_product_param {
+    num_output: 2
+    weight_filler {
+      type: "xavier"
+    }
+    bias_filler {
+      type: "constant"
+    }
+  }
+  param: "ip3_w"
+  param: "ip3_b"
+}
+
+layers {
     name: "loss"
     type: CONTRASTIVE_LOSS
     contrastive_loss_param {
         margin: 1
     }
-    bottom: "ip2"
-    bottom: "ip2_p"
+    bottom: "ip3"
+    bottom: "ip3_p"
     bottom: "label"
     bottom: "label_p"
     top: "loss"
