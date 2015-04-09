@@ -183,16 +183,16 @@ layers {
 }
 
 layers {
-  name: "fc6"
+  name: "fc6_new"
   type: INNER_PRODUCT
   bottom: "norm2"
-  top: "fc6"
-  blobs_lr: 0
-  blobs_lr: 0
-  weight_decay: 0
+  top: "fc6_new"
+  blobs_lr: 1
+  blobs_lr: 2
+  weight_decay: 1
   weight_decay: 0
   inner_product_param {
-    num_output: 4096
+    num_output: 1024
     weight_filler {
       type: "gaussian"
       std: 0.005
@@ -221,16 +221,16 @@ layers {
   }
 }
 layers {
-  name: "fc7"
+  name: "fc7_new"
   type: INNER_PRODUCT
-  bottom: "fc6"
-  top: "fc7"
-  blobs_lr: 0
-  blobs_lr: 0
-  weight_decay: 0
+  bottom: "fc6_new"
+  top: "fc7_new"
+  blobs_lr: 1
+  blobs_lr: 2
+  weight_decay: 1
   weight_decay: 0
   inner_product_param {
-    num_output: 4096
+    num_output: 256
     weight_filler {
       type: "gaussian"
       std: 0.005
@@ -262,7 +262,7 @@ layers {
 layers {
   name: "fc8_flickr"
   type: INNER_PRODUCT
-  bottom: "fc7"
+  bottom: "fc7_new"
   top: "fc8_flickr"
   blobs_lr: 1
   blobs_lr: 2
@@ -396,12 +396,12 @@ layers {
   type: INNER_PRODUCT
   bottom: "norm2_p"
   top: "fc6_p"
-  blobs_lr: 0
-  blobs_lr: 0
-  weight_decay: 0
+  blobs_lr: 1
+  blobs_lr: 2
+  weight_decay: 1
   weight_decay: 0
   inner_product_param {
-    num_output: 4096
+    num_output: 1024
     weight_filler {
       type: "gaussian"
       std: 0.005
@@ -435,12 +435,12 @@ layers {
   type: INNER_PRODUCT
   bottom: "fc6_p"
   top: "fc7_p"
-  blobs_lr: 0
-  blobs_lr: 0
-  weight_decay: 0
+  blobs_lr: 1
+  blobs_lr: 2
+  weight_decay: 1
   weight_decay: 0
   inner_product_param {
-    num_output: 4096
+    num_output: 256
     weight_filler {
       type: "gaussian"
       std: 0.005

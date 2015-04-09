@@ -1,4 +1,4 @@
-net: "models/bvlc_reference_caffenet/siamese_imagenet_train_val_3conv.prototxt"
+net: "models/bvlc_reference_caffenet/siamese_imagenet_train_val_2conv.prototxt"
 test_iter: 200
 test_interval: 500
 base_lr: 0.0001
