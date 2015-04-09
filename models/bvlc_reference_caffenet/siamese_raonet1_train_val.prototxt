@@ -204,7 +204,7 @@ layers {
   blobs_lr: 1
   blobs_lr: 2
   inner_product_param {
-    num_output: 850
+    num_output: 10
     weight_filler {
       type: "xavier"
     }
@@ -347,7 +347,7 @@ layers {
   blobs_lr: 1
   blobs_lr: 2
   inner_product_param {
-    num_output: 850
+    num_output: 10
     weight_filler {
       type: "xavier"
     }
@@ -364,7 +364,7 @@ layers {
     name: "loss"
     type: CONTRASTIVE_LOSS
     contrastive_loss_param {
-        margin: 1
+        margin: 100
     }
     bottom: "ip2"
     bottom: "ip2_p"
