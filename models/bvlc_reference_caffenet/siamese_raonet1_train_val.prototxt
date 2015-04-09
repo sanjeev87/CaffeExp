@@ -364,7 +364,7 @@ layers {
     name: "loss"
     type: CONTRASTIVE_LOSS
     contrastive_loss_param {
-        margin: 100
+        margin: 1
     }
     bottom: "ip2"
     bottom: "ip2_p"
