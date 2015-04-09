@@ -1,4 +1,4 @@
-name: "Siamese_SandyNet"
+name: "Siamese_RaoNet1"
 layers {
   name: "data"
   type: IMAGE_DATA
