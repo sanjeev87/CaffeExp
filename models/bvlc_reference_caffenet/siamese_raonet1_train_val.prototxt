@@ -1,17 +1,18 @@
-name: "Siamese_RaoNet1"
+name: "Siamese_SandyNet"
 layers {
   name: "data"
   type: IMAGE_DATA
   top: "data"
   top: "label"
   image_data_param {
-    source: "data/nimstim/nimstim_train_an_ha.txt"
+    source: "data/test/words_train.txt"
     batch_size: 32
-    new_height: 227
-    new_width: 227
+    new_height: 256
+    new_width: 256
   }
   transform_param {
-    mirror: false
+    crop_size: 227
+    mirror: true
     scale: 0.00390625
   }
   include: { phase: TRAIN }
@@ -22,13 +23,14 @@ layers {
   top: "data_p"
   top: "label_p"
   image_data_param {
-    source: "data/nimstim/nimstim_train_an_ha.txt"
+    source: "data/test/words_train_p.txt"
     batch_size: 32
-    new_height: 227
-    new_width: 227
+    new_height: 256
+    new_width: 256
   }
   transform_param {
-    mirror: false
+    crop_size: 227
+    mirror: true
     scale: 0.00390625
   }
   include: { phase: TRAIN }
@@ -39,12 +41,13 @@ layers {
   top: "data"
   top: "label"
   image_data_param {
-    source: "data/nimstim/nimstim_train_an_ha.txt"
+    source: "data/test/words_train.txt"
     batch_size: 32
-    new_height: 227
-    new_width: 227
+    new_height: 256
+    new_width: 256
   }
   transform_param {
+    crop_size: 227
     mirror: false
     scale: 0.00390625
   }
@@ -57,12 +60,13 @@ layers {
   top: "data_p"
   top: "label_p"
   image_data_param {
-    source: "data/nimstim/nimstim_train_an_ha.txt"
+    source: "data/test/words_train_p.txt"
     batch_size: 32
-    new_height: 227
-    new_width: 227
+    new_height: 256
+    new_width: 256
   }
   transform_param {
+    crop_size: 227
     mirror: false
     scale: 0.00390625
   }
@@ -175,7 +179,7 @@ layers {
   blobs_lr: 1
   blobs_lr: 2
   inner_product_param {
-    num_output: 1024
+    num_output: 2048
     weight_filler {
       type: "xavier"
     }
@@ -200,7 +204,7 @@ layers {
   blobs_lr: 1
   blobs_lr: 2
   inner_product_param {
-    num_output: 2
+    num_output: 850
     weight_filler {
       type: "xavier"
     }
@@ -318,7 +322,7 @@ layers {
   blobs_lr: 1
   blobs_lr: 2
   inner_product_param {
-    num_output: 1024
+    num_output: 2048
     weight_filler {
       type: "xavier"
     }
@@ -343,7 +347,7 @@ layers {
   blobs_lr: 1
   blobs_lr: 2
   inner_product_param {
-    num_output: 2
+    num_output: 850
     weight_filler {
       type: "xavier"
     }
@@ -355,11 +359,12 @@ layers {
   param: "ip2_b"
 }
 
+
 layers {
     name: "loss"
     type: CONTRASTIVE_LOSS
     contrastive_loss_param {
-        margin: 1
+        margin: 850
     }
     bottom: "ip2"
     bottom: "ip2_p"
