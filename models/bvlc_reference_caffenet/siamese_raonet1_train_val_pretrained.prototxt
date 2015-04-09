@@ -197,10 +197,10 @@ layers {
   top: "ip1"
 }
 layers {
-  name: "ip2"
+  name: "ip2_new"
   type: INNER_PRODUCT
   bottom: "ip1"
-  top: "ip2"
+  top: "ip2_new"
   blobs_lr: 1
   blobs_lr: 2
   inner_product_param {
@@ -340,10 +340,10 @@ layers {
   top: "ip1_p"
 }
 layers {
-  name: "ip2_p"
+  name: "ip2_new_p"
   type: INNER_PRODUCT
   bottom: "ip1_p"
-  top: "ip2_p"
+  top: "ip2_new_p"
   blobs_lr: 1
   blobs_lr: 2
   inner_product_param {
@@ -366,8 +366,8 @@ layers {
     contrastive_loss_param {
         margin: 1
     }
-    bottom: "ip2"
-    bottom: "ip2_p"
+    bottom: "ip2_new"
+    bottom: "ip2_new_p"
     bottom: "label"
     bottom: "label_p"
     top: "loss"
