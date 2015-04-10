@@ -214,16 +214,16 @@ layers {
 }
 
 layers {
-  name: "fc6"
+  name: "fc6_new"
   type: INNER_PRODUCT
   bottom: "conv3"
-  top: "fc6"
+  top: "fc6_new"
   blobs_lr: 0
   blobs_lr: 0
   weight_decay: 0
   weight_decay: 0
   inner_product_param {
-    num_output: 4096
+    num_output: 1024
     weight_filler {
       type: "gaussian"
       std: 0.005
@@ -239,29 +239,29 @@ layers {
 layers {
   name: "relu6"
   type: RELU
-  bottom: "fc6"
-  top: "fc6"
+  bottom: "fc6_new"
+  top: "fc6_new"
 }
 layers {
   name: "drop6"
   type: DROPOUT
-  bottom: "fc6"
-  top: "fc6"
+  bottom: "fc6_new"
+  top: "fc6_new"
   dropout_param {
     dropout_ratio: 0.5
   }
 }
 layers {
-  name: "fc7"
+  name: "fc7_new"
   type: INNER_PRODUCT
-  bottom: "fc6"
-  top: "fc7"
+  bottom: "fc6_new"
+  top: "fc7_new"
   blobs_lr: 0
   blobs_lr: 0
   weight_decay: 0
   weight_decay: 0
   inner_product_param {
-    num_output: 4096
+    num_output: 256
     weight_filler {
       type: "gaussian"
       std: 0.005
@@ -277,14 +277,14 @@ layers {
 layers {
   name: "relu7"
   type: RELU
-  bottom: "fc7"
-  top: "fc7"
+  bottom: "fc7_new"
+  top: "fc7_new"
 }
 layers {
   name: "drop7"
   type: DROPOUT
-  bottom: "fc7"
-  top: "fc7"
+  bottom: "fc7_new"
+  top: "fc7_new"
   dropout_param {
     dropout_ratio: 0.5
   }
@@ -293,7 +293,7 @@ layers {
 layers {
   name: "fc8_flickr"
   type: INNER_PRODUCT
-  bottom: "fc7"
+  bottom: "fc7_new"
   top: "fc8_flickr"
   blobs_lr: 1
   blobs_lr: 2
@@ -463,7 +463,7 @@ layers {
   weight_decay: 0
   weight_decay: 0
   inner_product_param {
-    num_output: 4096
+    num_output: 1024
     weight_filler {
       type: "gaussian"
       std: 0.005
@@ -501,7 +501,7 @@ layers {
   weight_decay: 0
   weight_decay: 0
   inner_product_param {
-    num_output: 4096
+    num_output: 256
     weight_filler {
       type: "gaussian"
       std: 0.005
