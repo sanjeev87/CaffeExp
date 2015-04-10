@@ -1,4 +1,4 @@
-name: "Siamese_ImageNet"
+name: "Siamese_ImageNet_3conv"
 layers {
   name: "data"
   type: IMAGE_DATA
