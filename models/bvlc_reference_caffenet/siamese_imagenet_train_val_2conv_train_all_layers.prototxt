@@ -1,4 +1,4 @@
-name: "Siamese_ImageNet_2conv"
+name: "Siamese_ImageNet_2conv_train_all_layers"
 layers {
   name: "data"
   type: IMAGE_DATA
