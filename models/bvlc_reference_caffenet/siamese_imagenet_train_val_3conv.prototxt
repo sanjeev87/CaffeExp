@@ -218,9 +218,9 @@ layers {
   type: INNER_PRODUCT
   bottom: "conv3"
   top: "fc6_new"
-  blobs_lr: 0
-  blobs_lr: 0
-  weight_decay: 0
+  blobs_lr: 1
+  blobs_lr: 2
+  weight_decay: 1
   weight_decay: 0
   inner_product_param {
     num_output: 1024
@@ -256,9 +256,9 @@ layers {
   type: INNER_PRODUCT
   bottom: "fc6_new"
   top: "fc7_new"
-  blobs_lr: 0
-  blobs_lr: 0
-  weight_decay: 0
+  blobs_lr: 1
+  blobs_lr: 2
+  weight_decay: 1
   weight_decay: 0
   inner_product_param {
     num_output: 256
@@ -458,9 +458,9 @@ layers {
   type: INNER_PRODUCT
   bottom: "conv3_p"
   top: "fc6_p"
-  blobs_lr: 0
-  blobs_lr: 0
-  weight_decay: 0
+  blobs_lr: 1
+  blobs_lr: 2
+  weight_decay: 1
   weight_decay: 0
   inner_product_param {
     num_output: 1024
@@ -496,9 +496,9 @@ layers {
   type: INNER_PRODUCT
   bottom: "fc6_p"
   top: "fc7_p"
-  blobs_lr: 0
-  blobs_lr: 0
-  weight_decay: 0
+  blobs_lr: 1
+  blobs_lr: 2
+  weight_decay: 1
   weight_decay: 0
   inner_product_param {
     num_output: 256
