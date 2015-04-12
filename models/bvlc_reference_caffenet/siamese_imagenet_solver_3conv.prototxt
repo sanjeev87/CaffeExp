@@ -1,5 +1,5 @@
 net: "models/bvlc_reference_caffenet/siamese_imagenet_train_val_3conv.prototxt"
-test_iter: 200
+test_iter: 97 
 test_interval: 500
 base_lr: 0.0001
 lr_policy: "step"
