@@ -109,9 +109,52 @@ layers {
 }
 
 layers {
+  name: "fc5"
+  type: INNER_PRODUCT
+  bottom: "norm2"
+  top: "fc5"
+  blobs_lr: 1
+  blobs_lr: 2
+  weight_decay: 1
+  weight_decay: 0
+  inner_product_param {
+    num_output: 8096
+    weight_filler {
+      type: "gaussian"
+      std: 0.005
+    }
+    bias_filler {
+      type: "constant"
+      value: 1
+    }
+  }
+  param: "fc5_w"
+  param: "fc5_b"
+}
+layers {
+  name: "relu5"
+  type: RELU
+  bottom: "fc5"
+  top: "fc5"
+}
+
+layers {
+  name: "drop5"
+  type: DROPOUT
+  bottom: "fc5"
+  top: "fc5"
+  dropout_param {
+    dropout_ratio: 0.5
+  }
+}
+
+
+
+
+layers {
   name: "fc6_new"
   type: INNER_PRODUCT
-  bottom: "conv3"
+  bottom: "fc5"
   top: "fc6_new"
   blobs_lr: 1
   blobs_lr: 2

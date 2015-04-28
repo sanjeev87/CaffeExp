@@ -183,9 +183,50 @@ layers {
 }
 
 layers {
-  name: "fc6_new"
+  name: "fc5"
   type: INNER_PRODUCT
   bottom: "norm2"
+  top: "fc5"
+  blobs_lr: 1
+  blobs_lr: 2
+  weight_decay: 1
+  weight_decay: 0
+  inner_product_param {
+    num_output: 8096
+    weight_filler {
+      type: "gaussian"
+      std: 0.005
+    }
+    bias_filler {
+      type: "constant"
+      value: 1
+    }
+  }
+  param: "fc5_w"
+  param: "fc5_b"
+}
+layers {
+  name: "relu5"
+  type: RELU
+  bottom: "fc5"
+  top: "fc5"
+}
+
+layers {
+  name: "drop5"
+  type: DROPOUT
+  bottom: "fc5"
+  top: "fc5"
+  dropout_param {
+    dropout_ratio: 0.5
+  }
+}
+
+
+layers {
+  name: "fc6_new"
+  type: INNER_PRODUCT
+  bottom: "fc5"
   top: "fc6_new"
   blobs_lr: 1
   blobs_lr: 2
@@ -392,9 +433,51 @@ layers {
 }
 
 layers {
-  name: "fc6_p"
+  name: "fc5_p"
   type: INNER_PRODUCT
   bottom: "norm2_p"
+  top: "fc5_p"
+  blobs_lr: 1
+  blobs_lr: 2
+  weight_decay: 1
+  weight_decay: 0
+  inner_product_param {
+    num_output: 8096
+    weight_filler {
+      type: "gaussian"
+      std: 0.005
+    }
+    bias_filler {
+      type: "constant"
+      value: 1
+    }
+  }
+  param: "fc5_w"
+  param: "fc5_b"
+}
+layers {
+  name: "relu5_p"
+  type: RELU
+  bottom: "fc5_p"
+  top: "fc5_p"
+}
+
+layers {
+  name: "drop5_p"
+  type: DROPOUT
+  bottom: "fc5_p"
+  top: "fc5_p"
+  dropout_param {
+    dropout_ratio: 0.5
+  }
+}
+
+
+
+layers {
+  name: "fc6_p"
+  type: INNER_PRODUCT
+  bottom: "fc5_p"
   top: "fc6_p"
   blobs_lr: 1
   blobs_lr: 2
