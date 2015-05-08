@@ -556,7 +556,7 @@ layers {
 
 layers {
     name: "loss"
-    type: CONTRASTIVE_LOSS
+    type: MINE_CONTRASTIVE_LOSS
     contrastive_loss_param {
         margin: 1
     }
