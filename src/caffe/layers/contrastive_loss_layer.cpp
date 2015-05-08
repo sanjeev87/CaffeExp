@@ -45,8 +45,8 @@ void ContrastiveLossLayer<Dtype>::Forward_cpu(
   for (int i = 0; i < bottom[0]->num(); ++i) {
     dist_sq_.mutable_cpu_data()[i] = caffe_cpu_dot(channels,
         diff_.cpu_data() + (i*channels), diff_.cpu_data() + (i*channels));
-    printf("label : %d \n", static_cast<int>(bottom[2]->cpu_data()[i]));
-    printf("contrastive_loss_layer.cpp margin : %d\n", (int) margin);
+    // printf("label : %d \n", static_cast<int>(bottom[2]->cpu_data()[i]));
+    // printf("contrastive_loss_layer.cpp margin : %d\n", (int) margin);
 
     if (static_cast<int>(bottom[2]->cpu_data()[i])) {  // similar pairs
       loss += dist_sq_.cpu_data()[i];

@@ -32,7 +32,7 @@ void ContrastiveLossLayer<Dtype>::Forward_gpu(
       Dtype(0.0),
       dist_sq_.mutable_gpu_data());  // \Sum (a_i-b_i)^2
   Dtype margin = this->layer_param_.contrastive_loss_param().margin();
-  printf("contrastive_loss_layer.cu : margin is %d\n", (int) margin);
+  // printf("contrastive_loss_layer.cu : margin is %d\n", (int) margin);
   Dtype loss(0.0);
       
       

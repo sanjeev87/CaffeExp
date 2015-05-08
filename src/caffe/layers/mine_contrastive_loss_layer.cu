@@ -32,7 +32,7 @@ void MineContrastiveLossLayer<Dtype>::Forward_gpu(
       Dtype(0.0),
       dist_sq_.mutable_gpu_data());  // \Sum (a_i-b_i)^2
   Dtype margin = this->layer_param_.mine_contrastive_loss_param().margin();
-  printf("mine_contrastive_layer.cu : margin %d\n", (int) margin);
+  //printf("mine_contrastive_layer.cu : margin %d\n", (int) margin);
   Dtype loss(0.0);
   Dtype temp;
 
