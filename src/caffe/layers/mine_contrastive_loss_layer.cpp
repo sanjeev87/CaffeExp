@@ -42,6 +42,7 @@ void MineContrastiveLossLayer<Dtype>::Forward_cpu(
       diff_.mutable_cpu_data());  // a_i-b_i
   const int channels = bottom[0]->channels();
   Dtype margin = this->layer_param_.mine_contrastive_loss_param().margin();
+  printf("mine_contrastive_layer.cpp : margin %d\n", (int) margin);
   Dtype temp;
   Dtype loss(0.0);
   for (int i = 0; i < bottom[0]->num(); ++i) {
