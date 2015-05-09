@@ -10,5 +10,5 @@ max_iter: 20000
 momentum: 0.9
 weight_decay: 0.0005
 snapshot: 1000
-snapshot_prefix: "models/bvlc_reference_caffenet/siamese_imagenet_train_all_emotions_2conv"
+snapshot_prefix: "models/bvlc_reference_caffenet/siamese_imagenet_train_all_emotions_2conv_mine"
 solver_mode: GPU

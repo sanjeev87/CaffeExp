@@ -502,8 +502,8 @@ layers {
 
 layers {
     name: "loss"
-    type: CONTRASTIVE_LOSS
-    contrastive_loss_param {
+    type: MINE_CONTRASTIVE_LOSS
+    mine_contrastive_loss_param {
         margin: 1
     }
     bottom: "fc8_flickr"
