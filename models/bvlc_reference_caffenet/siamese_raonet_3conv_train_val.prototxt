@@ -217,7 +217,7 @@ layers {
   weight_decay: 1
   weight_decay: 0
   inner_product_param {
-    num_output: 1024
+    num_output: 2048
     weight_filler {
       type: "gaussian"
       std: 0.005
@@ -454,7 +454,7 @@ layers {
   weight_decay: 1
   weight_decay: 0
   inner_product_param {
-    num_output: 1024
+    num_output: 2048
     weight_filler {
       type: "gaussian"
       std: 0.005
