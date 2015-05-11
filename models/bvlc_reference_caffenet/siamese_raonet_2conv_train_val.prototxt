@@ -80,6 +80,8 @@ layers {
   top: "conv1"
   blobs_lr: 1
   blobs_lr: 2
+  weight_decay: 1
+  weight_decay: 0
   convolution_param {
     num_output: 20
     kernel_size: 5
@@ -129,6 +131,8 @@ layers {
   top: "conv2"
   blobs_lr: 1
   blobs_lr: 2
+  weight_decay: 1
+  weight_decay: 0
   convolution_param {
     num_output: 50
     kernel_size: 5
@@ -280,6 +284,8 @@ layers {
   top: "conv1_p"
   blobs_lr: 1
   blobs_lr: 2
+  weight_decay: 1
+  weight_decay: 0
   convolution_param {
     num_output: 20
     kernel_size: 5
@@ -329,6 +335,8 @@ layers {
   top: "conv2_p"
   blobs_lr: 1
   blobs_lr: 2
+  weight_decay: 1
+  weight_decay: 0
   convolution_param {
     num_output: 50
     kernel_size: 5
