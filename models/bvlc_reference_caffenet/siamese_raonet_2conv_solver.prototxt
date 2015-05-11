@@ -3,7 +3,7 @@ net: "models/bvlc_reference_caffenet/siamese_raonet_2conv_train_val.prototxt"
 # test_iter specifies how many forward passes the test should carry out.
 test_iter: 97
 test_interval: 500
-base_lr: 0.00001
+base_lr: 0.000001
 lr_policy: "step"
 gamma: 0.1
 stepsize: 5000
