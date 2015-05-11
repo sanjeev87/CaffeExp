@@ -1,4 +1,4 @@
-name: "Siamese_ImageNet_3conv"
+name: "Siamese_ImageNet_3conv_FineTune"
 layers {
   name: "data"
   type: IMAGE_DATA
